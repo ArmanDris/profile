@@ -1,0 +1,288 @@
+<html>
+
+<head>
+    <title>Arman Drismir | Electrochemistry project</title>
+    <meta name="description" content="History of batteries">
+    <meta name="keywords" content="Arnan Drismir Chemistry Chem 12 twelve history batteries battery electrochemistry">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="ndps">
+            <p>
+                Arman Drismir<br />
+                June 17 2020<br />
+                Chemistry 11<br />
+                Period: C<br />
+                Semester 1<br />
+            </p>
+        </div>
+        <div id="ndpsR">
+            <p>
+                Arman Drismir<br />
+                June 17 2020<br />
+                Chemistry 11<br />
+                Period: C<br />
+                Semester 1<br />
+            </p>
+        </div>
+        <h1>The Chemical History of Batteries</h1>
+        <div id="anode"></div>
+        <div id="cathode"></div>
+        <!--<img src="img/102-1029358_curl-png-border-curl-png.png" />-->
+        <canvas id="canvas"></canvas>
+        <script src='script.js'></script>
+    </header>
+
+    <main>
+        <div id="wBuff"></div>
+        <div id="vPille">
+            <h2>"Voltaic Pile" - The first chemical battery</h2>
+            <table class='twoCol'>
+                <tr>
+                    <td>
+                        <img src="img/Voltaic Pille Labeld.png" width="100%" />
+                    </td>
+                    <td>
+                        <div class='text'>
+                            <p>Created by Luigi Galvani, Alessandro Volta the voltaic pile was the first chemical
+                                battery. A voltaic pile consists of copper ( cathode ) and zinc ( anode ) disks
+                                separated by a cloth dipped in brine (a salt solution).
+                            </p>
+                            <p>
+                                <br />
+                                Zn half reaction:<br />
+                                Zn(s) -> Zn<sup>+2 </sup>(aq) + 2e<sup>-</sup><br /></br>
+
+                                Cu half reaction:<br />
+                                Cu<sup>+2</sup>(aq) + 2e<sup>-</sup> -> Cu(s)<br /><br />
+
+                                The net cell reaction is:<br />
+                                Zn(s) + Cu<sup>+2</sup>(aq) -> Zn<sup>+2</sup>(aq) + Cu(s)<br />
+                                <br />
+                            </p>
+                            <p>
+                                If you were to connect a piece of zinc and copper without an electrolyte the current
+                                would flow momentarily. After a few moments, however electrons would build up at the
+                                cathode (copper plate) preventing any further flow of electrons. In textbooks, the
+                                electrode and electrolyte are often the same element for ease of comprehension.
+                                Fortunately you don't need the same elements as long as a reaction occurs. In the
+                                absence of a salt bridge the voltaic pile uses a cloth dipped in brine.
+                            </p>
+                            <p>
+                                One of the negatively charged chlorine ions gives up an electron to the positively
+                                charged zinc. The neutral chlorine atom then bonds with another neutral chlorine atom
+                                turning into chlorine gas and evaporating.
+                            </p>
+                            <p>
+                                Although the most obvious next reaction would be the sodium gaining an electron from the
+                                negatively charged copper this is not the case. Sodium’s low electronegativity means
+                                that there is not enough energy for it to gain another electron. Instead the water
+                                molecules on the surface of the copper react. The water molecule accepts an electron
+                                from the copper producing hydroxide and a hydrogen atom. The hydroxide remains inside
+                                the solution while the hydrogen bonds with another neutral hydrogen forming hydrogen gas
+                                and evaporating. Now the electron buildup is overcome and electrons can continue to
+                                flow.
+                            </p>
+                            <p>
+                                </br>
+                                Cl half reaction(s) at anode:<br />
+                                Cl<sup>-1</sup> -> Cl + electron (to the zinc)</br>
+                                Cl + Cl -> Cl<sub>2</sub></br></br>
+
+                                H20 half reaction at cathode:</br>
+                                H<sub>2</sub>O + electron (from copper) -> OH<sup>-</sup> + H2</br></br>
+
+                                The net electrolyte reaction is:</br>
+                                2NaCl (aq) + 2H<sub>2</sub>O -> 2NaOH (aq) + H<sub>2</sub> + Cl<sub>2</sub></br>
+                                </br>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class='infCell'>
+            <h2>"Daniell Cell"- Introduction to practical batteries</h2>
+            <table class='twoCol'>
+                <tr>
+                    <td>
+                        <img src="img/Daniell Cell.png" width="100%" />
+                    </td>
+                    <td>
+                        <div class='text'>
+                            <p>
+                                With the introduction of the Daniell cell came visions of batteries’ practical use.
+                                Improving upon many of the voltaic pile’s flaws the Daniell cell saw popularity in
+                                telegraph networks. The battery was so impressive that the electromotive force of the
+                                Daniell cell was used to define the volt ( with later definitions specifying
+                                electromotive force at 25° the cell now produces 1.10V ).
+                            </p>
+                            <p>
+                                <br />
+                                Zn/ZnSO4 half reaction ( oxidation )<br />
+                                Zn(s) -> Zn<sup>2+(aq)</sup> + 2e<sup>−</sup> ( E°: −0.7618 V )</br>
+                                </br>
+                                Cu/CuSO4 half reaction ( reduction )</br>
+                                Cu<sup>2+</sup>(aq) + 2e<sup>-</sup> -> Cu(s) ( E°: -0.340 V )</br>
+                                </br>
+                                The net cell reaction is:</br>
+                                Cu<sup>2+</sup>(aq) + 2e<sup>-</sup> -> Cu(s) ( E°: -0.340 V )</br> <br />
+                            </p>
+                            <p>
+                                A Daniell Cell consists of a large copper cylinder (anode) filled with a copper sulphate
+                                solution. In order to maintain the concentration of the copper sulphate solution copper
+                                sulphate crystals are placed at the bottom of the copper cylinder Inside the copper
+                                cylinder is a porous pot filled with a sulphuric acid solution. Finally a zinc rod
+                                (cathode) is placed inside the porous pot.
+                            </p>
+                            <p>
+                                The reaction starts with the negatively charged sulphate ions inside the porous pot.
+                                The negative sulphate ions react with the zinc rod creating zinc sulphate. The zinc rod
+                                attains a negative charge with the excess of electrons created by the production of zinc
+                                sulphate. On the other hand the hydrogen ions move to the copper vessel. The free ions
+                                of the copper then neutralise the hydrogen ions to form hydrogen atoms. The copper
+                                cylinder (anode) becomes positively charged due to a deficiency of electrons. Finally
+                                the hydrogen atoms react with the copper sulphate solution to form sulphuric acid.
+                            </p>
+                            <p>
+                                <br />
+                                Sulphuric Acid dissolving:<br />
+                                H<sub>2</sub>SO<sub>4</sub> -> 2H+ + SO<sub>4</sub><sup>-2</sup><br />
+                                <br />
+                                Reaction at the cathode:<br />
+                                Zn + SO<sub>4</sub> <=> ZnSO<sub>4</sub> + 2e-<br />
+                                <br />
+                                Reaction at the anode:<br />
+                                CuSO<sub>4</sub> + 2H <=> H<sub>2</sub>SO<sub>4</sub> + Cu<br />
+                                <br />
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class='infCell'>
+            <h2>"Lead-Acid Batteries" - The first rechargeable batteries</h2>
+            <table class='twoCol'>
+                <tr>
+                    <td>
+                        <img src="img/Lead Acid Battery.png" width="100%" />
+                    </td>
+                    <td>
+                        <div class='text'>
+                            <p>
+                                The first lead-acid battery was invented in 1859 by Gaston Planté. Lead-acid batteries
+                                were revolutionary because they were the first to be rechargeable. This battery does not
+                                come without severe drawbacks. It has a very low energy to weight ratio and a low energy
+                                to volume ratio. It does however have a high power to weight ratio making it an
+                                attractive choice for use in starter motors. This inexpensive but specialised battery
+                                dominated the
+                                battery market, accounting for 45% of all battery sales in 1999.
+                            </p>
+                            <p>
+                                <br />
+                                Negative plate reaction<br />
+                                Pb(s) + HSO<sup>-4</sup>(aq) -> PbSO<sub>4</sub>(s) + H<sup>4</sup>(aq) + 2e<sup>4</sup><br />
+                                <br />
+                                Positive plate reaction<br />
+                                PbO<sub>2</sub>(s) + HSO<sup>-4</sup>(aq) + 3H<sup>+</sup>(aq) + 2e<sup>-</sup> -> PbSO<sub>4</sub>(s) + 2H<sub>2</sub>O(l)<br />
+                                <br />
+                                The total reaction can be written as<br />
+                                Pb(s) + PbO<sub>2</sub>(s) + 2H<sub>2</sub>SO<sub>4</sub>(aq) -> 2PbSO<sub>4</sub>(s) + 2H<sub>2</sub>O(l) E० cell = 2.05V<br />
+                                <br />
+                            </p>
+                            <p>
+                                Lead-acid batteries are relatively simple. They consist of one lead cathode and another
+                                lead(IV) oxide anode. The cathode and anode are put inside a container filled with
+                                sulphuric acid. As the pure lead cathode discharges it bonds with a sulphate ion
+                                creating lead sulphate. As lead(IV) oxide cathode receives electrons it reacts with the
+                                sulphuric acid and the hydrogen to create lead sulphate and water.
+                            </p>
+                            <p>
+                                Because of the nature of their chemistry a lead acid battery has a lead cathode and
+                                lead(IV) oxide anode when it is charged. When the battery is discharged it has two lead
+                                sulphate rods and a less concentrated sulphuric acid solution. Measuring the
+                                concentration of the sulphuric acid solution allows the battery level to be determined.
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class='infCell'>
+            <h2>"Lithium-ion batteries" - A modern wonder</h2>
+            <table class='twoCol'>
+                <tr>
+                    <td>
+                        <img src="img/Parts_of_a_lithium-ion_battery.png" width="100%" />
+                    </td>
+                    <td>
+                        <div class='text'>
+                            <p>
+                                Lithium ion batteries see a large majority presence in electronics, vehicles, and
+                                aerospace technology. They are popular in these categories because they are rechargeable
+                                and have a high energy to volume, and energy to weight ratio. Pure lithium is extremely
+                                reactive, which is why lithium-ion batteries don’t use pure lithium. Instead,
+                                lithium-ion batteries contain a lithium-metal oxide, such as lithium-cobalt oxide.
+                            </p>
+                            <p>
+                                <br />
+                                Lithium-doped cobalt oxide half reaction (cathode)<br />
+                                CoO<sub>2</sub> + Li<sup>+</sup> + e<sup>-</sup> <=> LiCoO<sub>2</sub><br />
+                                <br />
+                                Graphite half reaction (anode)<br />
+                                LiC<sub>6</sub> <=> C<sub>6</sub> + Li + + e<sup>-</sup><br />
+                                <br />
+                                The net cell reaction is:<br />
+                                LiC<sub>6</sub> + CoO<sub>2</sub> <=> C<sub>6</sub> + LiCoO<sub>2</sub><br />
+                                <br />
+                            </p>
+                            <p>
+                                Lithium ion batteries advance our understanding of batteries taking on a completely new
+                                structure. In place of a container with electrodes lithium ion batteries resemble a
+                                series of sheets.
+                            </p>
+                            <p>
+                                A lithium ion battery consists of three main sheets. The first being a copper sheet
+                                (anode) and the second being an organic salt of lithium as the electrolyte. The third
+                                sheet is an aluminum sheet (cathode). A lithium metal oxide is pasted to the cathode and
+                                graphite is pasted to the anode. To charge the battery a power source is connected to
+                                the battery. The electrons are pulled away from the lithium atoms and into the cathode.
+                                The lithium ions are attracted to the anode and rest in between graphite layers. Once
+                                all the lithium ions are stored in the graphite, the battery is fully charged.
+                            </p>
+                            <p>
+                                Once the power source is removed and a load is connected to the batteries the lithium
+                                ions will want to return to their stable state. The lithium ions return to the metal
+                                oxide and the electrons return through the wires connecting the cathode and anode. Once
+                                all the lithium ions have returned to the metal oxide the battery is depleted.
+                            </p>
+                            <p>
+                                <br />
+                                Over Discharging supersaturated lithium cobalt oxide, leads to the production of lithium
+                                oxide:<br />
+                                Li<sup>+</sup> + e<sup>-</sup> + LiCoO<sub>2</sub> -> Li<sub>2</sub>O + CoO<br />
+                                <br />
+                                Overcharging up to 5.2 volts leads to the synthesis of cobalt(IV) oxide:<br />
+                                LiCoO<sub>2</sub> -> Li<sup>+</sup> + CoO<sub>2</sub> + e<sup>-</sup><br />
+                                <br />
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>
+        </p>
+        <p>
+            adrismir@gmail.com<br />
+        </p>
+    </footer>
+</body>
+</html>

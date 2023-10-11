@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.roboto-slab {
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.roboto-slab-light {
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: lighter;
+}
+
+.roboto-slab-bold {
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: bold;
+}

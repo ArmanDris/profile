@@ -2,16 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.roboto-slab {
-    font-family: 'Roboto Slab', sans-serif;
+.playfair {
+    font-family: 'Playfair Display', serif;
 }
 
-.roboto-slab-light {
-    font-family: 'Roboto Slab', sans-serif;
-    font-weight: lighter;
+a {
+    border-bottom: 1px solid white;
 }
 
-.roboto-slab-bold {
-    font-family: 'Roboto Slab', sans-serif;
-    font-weight: bold;
+a:hover {
+    border-bottom: 2px solid #C792DF;
+    transition: 0.25s;
 }

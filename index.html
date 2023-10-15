@@ -3,49 +3,52 @@
 
 <head>
     <link rel="stylesheet" href="output.css">
+    <title>Arman Drismir</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
-    <title>Arman Drismir</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-black text-[#FBF2EA] font-sans">
-    <header class="relative flex items-center justify-center h-[100vh] bg-[#1f1f1f]">
-        <h1 class="text-4xl">
-            Arman's Personal Profile
+<body class="bg-black text-[#FBF2EA] playfair">
+    <header
+        class="relative flex items-center justify-center h-[100vh] bg-[url('img/BC-PLACE-jhana-ellard-aaMA9bBsTSY-unsplash.jpg')] bg-cover bg-fixed bg-bottom">
+        <h1 class="text-6xl tracking-wider font-bold">
+            Welcome
         </h1>
     </header>
 
     <main>
-        <div id="project-area" class="relative flex justify-center bg-[#1f1f1f]">
-            <div id="project-list" class="w-[1000px]">
+        <div id="project-area" class="p-20 leading-8">
 
-                <div class="">
-                    <h3 class="">C++ Chess Engine:</h3>
-                    <div class="">
-                        <div class="">
-                            <img src="img/chess_game.png" alt="Project 1">
-                        </div>
-                        <div class="">
-                            <p class="">
-                            <ul class="">
-                                <li>badly drawn pieces </li>
-                                <l1>SFML</l1>
-                                <l1>4 byte piece representation</l1>
-                                <l1>blazingly fast move generation (see perft results in log)</l1>
-                                <l1>minimax algorithm</l1>
-                            </ul>
-                            </p>
-                        </div>
-                    </div>
+            <h2 class="text-4xl text-center font-bold my-20">My projects</h2>
+
+            <div class="grid grid-cols-4 gap-5">
+                <div class="col-span-3">
+                    <h3 class="text-3xl mb-4">C++ Chess engine</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Created a chess GUI with SFML</li>
+                        <li>Implemented the mini-max algorithm with alpha-beta pruning</li>
+                        <li>Improved search algorithm's speed 600x with profiling & refactoring</li>
+                        <li>Used bit manipulation to save 90 bytes on each board object</li>
+                    </ul>
+                    <a href="https://github.com/ArmanDris/ChessEngines" target="_blank">Link to GitHub project</a>
                 </div>
-
+                <div class="col-span-1 justify-self-end">
+                    <img src="img/chess_game.png" alt="Chess engine" class="w-full" width="225px">
+                </div>
             </div>
+
         </div>
     </main>
 
-    <footer class="bg-[#1f1f1f] h-[50vh] flex items-center justify-center">
+    <footer class="h-[50vh] flex items-center justify-center flex-col">
         <p class="w-screen text-center m-">adrismir@gmail.com</p>
+        <p>Photo by <a
+                href="https://unsplash.com/@jhana_ellard?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jhana
+                Ellard</a> on <a
+                href="https://unsplash.com/photos/aaMA9bBsTSY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </p>
+
     </footer>
 </body>
 

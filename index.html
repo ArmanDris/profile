@@ -4,41 +4,78 @@
 <head>
     <link rel="stylesheet" href="output.css">
     <title>Arman Drismir</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Manrope:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
 </head>
 
-<body class="bg-black text-[#FBF2EA] playfair">
+<body class="bg-black text-white manrope">
     <header
         class="relative flex items-center justify-center h-[100vh] bg-[url('img/BC-PLACE-jhana-ellard-aaMA9bBsTSY-unsplash.jpg')] bg-cover bg-fixed bg-bottom">
         <h1 class="text-6xl tracking-wider font-bold">
-            Welcome
+            This is my website
         </h1>
     </header>
 
-    <main>
-        <div id="project-area" class="p-20 leading-8">
+    <main class="p-20 leading-8">
 
-            <h2 class="text-4xl text-center font-bold my-20">My projects</h2>
+        <h2 class="text-4xl text-center my-16 mb-40">These are my three favorite projects.</h2>
 
-            <div class="grid grid-cols-4 gap-5">
-                <div class="col-span-3">
-                    <h3 class="text-3xl mb-4">C++ Chess engine</h3>
-                    <ul class="list-disc list-inside">
-                        <li>Created a chess GUI with SFML</li>
-                        <li>Implemented the mini-max algorithm with alpha-beta pruning</li>
-                        <li>Improved search algorithm's speed 600x with profiling & refactoring</li>
-                        <li>Used bit manipulation to save 90 bytes on each board object</li>
-                    </ul>
-                    <a href="https://github.com/ArmanDris/ChessEngines" target="_blank">Link to GitHub project</a>
-                </div>
-                <div class="col-span-1 justify-self-end">
-                    <img src="img/chess_game_vid.gif" alt="Chess engine" class="w-full" width="225px">
-                </div>
+        <div class="grid grid-cols-4 gap-5 my-36">
+            <div class="col-span-3">
+                <h3 class="text-3xl mb-4">C++ Chess Engine</h3>
+                <ul class="list-disc list-inside">
+                    <li>Created a chess GUI with the SFML library</li>
+                    <li>Implemented the mini-max algorithm with alpha-beta pruning</li>
+                    <li>Improved search algorithm's speed 600x with profiling & refactoring</li>
+                    <li>Used bit manipulation to save 90 bytes on each board object</li>
+                </ul>
+                <a href="https://github.com/ArmanDris/ChessEngines" target="_blank">GitHub Repo</a>
             </div>
-
+            <div class="col-span-1 justify-self-end">
+                <img src="img/chess_game_vid.gif" alt="Chess engine" class="w-full">
+            </div>
         </div>
+
+        <div class="grid grid-cols-4 gap-5 my-36">
+            <div class="col-span-3">
+                <h3 class="text-3xl mb-4">Sudoku Web App</h3>
+                <ul class="list-disc list-inside">
+                    <li>Developed a modern web app to play Sudoku</li>
+                    <li>Wrote the backend using express and SQLite</li>
+                    <li>Client-server connection allows the global high scores to be displayed</li>
+                </ul>
+                <a href="https://github.com/ArmanDris/Sudoku" target="_blank" class="mr-2">GitHub Repo</a>
+                <a href="Sudoku/index.html" target="_blank">Live website</a>
+            </div>
+            <div class="col-span-1 justify-self-end">
+                <img src="img/Sudoku_gif.gif" class="w-full"></img>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-5 my-36">
+            <div class="col-span-3">
+                <h3 class="text-3xl mb-4">This Website</h3>
+                <p>This website is hopefully going to show the best of my front end design.
+                    I started programming in JS so there is a special place in my heart for
+                    web design. I also wanted a place to host all of my past projects and I
+                    did not want to make a repo for every single one.
+                </p>
+                <a href="https://github.com/ArmanDris/profile" target="_blank" class="mr-2">GitHub Repo</a>
+                <a href="index.html" target="_blank">This is a link to the page you are on</a>
+            </div>
+            <div class="col-span-1 justify-self-end">
+                <img src="img/Sudoku_gif.gif" class="w-full"></img>
+            </div>
+        </div>
+
+        <h2 class="text-4xl text-center mt-40 my-10">I love the rest of my projects as well, not enough to put them on the homepage though.</h2>
+        <p class="text-center mb-40 text-lg"><a href="projects.html">The rest of my projects</a></p>
+
     </main>
 
     <footer class="h-[50vh] flex items-center justify-center flex-col">

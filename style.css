@@ -2,15 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-.playfair {
-    font-family: 'Playfair Display', serif;
+.manrope {
+    font-family: 'Manrope', sans-serif;
+}
+
+.libre-b {
+    font-family: 'Libre Baskerville', serif;
 }
 
 a {
     border-bottom: 1px solid white;
+    transition: 0.25s;
 }
 
 a:hover {
     border-bottom: 2px solid #C792DF;
-    transition: 0.25s;
 }

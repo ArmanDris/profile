@@ -15,62 +15,36 @@ canvas.height = h;
 
 let ctx = canvas.getContext("2d");
 
-var padding = 100;
+let offset = 0;
 
-function drawCircle(x, y) {
-    ctx.beginPath();
-    ctx.arc(x + padding, y + padding, 5, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(255, 255, 255, 0.1)";
-    ctx.fill();
-    ctx.stroke();
+function mainMountainSin(x) {
+    //return Math.sin(x + offset*2) + 0.5 * Math.sin(2 * x + offset*2) + 0.25 * Math.sin(4 * x + offset*2);
+    return -Math.sin(1.75*(x+2*offset)) - Math.sin(3*(x+5*offset)) - Math.sin(6*(x+3*offset)) + Math.sin(8*(x+5*offset));
 }
 
-var dot_spacing = 75;
-
-for (let j = 0; j * dot_spacing + padding < h - padding; j++) {
-    for (let i = 0; i * dot_spacing + padding < w - padding; i++) {
-        drawCircle(i * dot_spacing, j * dot_spacing);
-    }
-}
-
-// DIDASDIAOPSDHOUSAHDOUASHG
-
-const hexSize = 50;
-const dx = 1.5 * hexSize;
-const dy = Math.sqrt(3) * hexSize;
-const rows = Math.ceil(canvas.height / dy) + 1;
-const cols = Math.ceil(canvas.width / dx) + 1;
-
-let offsetX = 0;
-let offsetY = 0;
-
-function drawHex(x, y) {
-    ctx.beginPath();
-    for (let i = 0; i < 6; i++) {
-        ctx.lineTo(x + hexSize * Math.cos((Math.PI / 3) * i),
-                   y + hexSize * Math.sin((Math.PI / 3) * i));
-    }
-    ctx.closePath();
-    ctx.fill();
-}
-
-function draw() {
+function drawScene() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    for (let row = 0; row < rows; row++) {
-        for (let col = 0; col < cols; col++) {
-            let x = col * dx + offsetX;
-            let y = row * dy + (col % 2 === 0 ? offsetY : offsetY + dy / 2);
-            drawHex(x, y);
-        }
-    }
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
 
-    offsetX -= 1; // speed of shift in the x-direction
-    if (offsetX <= -dx) {
-        offsetX = 0;
+    for (let i = 0; i < canvas.width; i++) {
+        var height = 7;
+        var zoom = 0.005;
+        var y = mainMountainSin(i * zoom) * height + canvas.height / 1.25;
+        ctx.lineTo(i, y);
     }
+    ctx.lineTo(canvas.width, 0);
+    ctx.closePath();
 
-    requestAnimationFrame(draw);
+    ctx.lineWidth = 0;
+
+    ctx.fillStyle = 'rgba(198, 144, 223, 0.25)';
+    ctx.fill();
+
+    offset+=0.0005;
+
+    requestAnimationFrame(drawScene);
 }
 
-draw();
+requestAnimationFrame(drawScene);

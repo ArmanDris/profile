@@ -33,3 +33,44 @@ for (let j = 0; j * dot_spacing + padding < h - padding; j++) {
     }
 }
 
+// DIDASDIAOPSDHOUSAHDOUASHG
+
+const hexSize = 50;
+const dx = 1.5 * hexSize;
+const dy = Math.sqrt(3) * hexSize;
+const rows = Math.ceil(canvas.height / dy) + 1;
+const cols = Math.ceil(canvas.width / dx) + 1;
+
+let offsetX = 0;
+let offsetY = 0;
+
+function drawHex(x, y) {
+    ctx.beginPath();
+    for (let i = 0; i < 6; i++) {
+        ctx.lineTo(x + hexSize * Math.cos((Math.PI / 3) * i),
+                   y + hexSize * Math.sin((Math.PI / 3) * i));
+    }
+    ctx.closePath();
+    ctx.fill();
+}
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
+            let x = col * dx + offsetX;
+            let y = row * dy + (col % 2 === 0 ? offsetY : offsetY + dy / 2);
+            drawHex(x, y);
+        }
+    }
+
+    offsetX -= 1; // speed of shift in the x-direction
+    if (offsetX <= -dx) {
+        offsetX = 0;
+    }
+
+    requestAnimationFrame(draw);
+}
+
+draw();

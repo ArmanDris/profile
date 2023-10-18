@@ -39,7 +39,7 @@ function drawScene() {
 
     ctx.lineWidth = 0;
 
-    ctx.fillStyle = 'rgba(198, 144, 223, 0.25)';
+    ctx.fillStyle = 'rgba(198, 144, 223, 0.1)';
     ctx.fill();
 
     offset+=0.0005;

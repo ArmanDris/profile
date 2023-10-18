@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* https://coolors.co/000000-1f1f1f-c792df-fbf2ea-9bb4d1 */
+/*  Bg          #000000
+    blk-txt     #1F1F1F
+    purple      #C792DF
+    light-txt   #FBF2EA
+    light-blu   #DCEDFF */
+    
+
 .manrope {
     font-family: 'Manrope', sans-serif;
 }
@@ -11,10 +19,10 @@
 }
 
 a {
-    border-bottom: 1px solid white;
-    transition: 0.25s;
+    border-bottom: 1px solid #FBF2EA;
+    transition: 0.2s;
 }
 
 a:hover {
-    border-bottom: 2px solid #C792DF;
+    border-bottom: 2px solid #FBF2EA;
 }

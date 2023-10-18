@@ -26,7 +26,7 @@ function drawScene() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     ctx.beginPath();
-    ctx.moveTo(0, 0);
+    ctx.moveTo(0, canvas.height);
 
     for (let i = 0; i < canvas.width; i++) {
         var height = 7;
@@ -34,12 +34,13 @@ function drawScene() {
         var y = mainMountainSin(i * zoom) * height + canvas.height / 1.25;
         ctx.lineTo(i, y);
     }
-    ctx.lineTo(canvas.width, 0);
+    ctx.lineTo(canvas.width, canvas.height);
     ctx.closePath();
 
     ctx.lineWidth = 0;
 
-    ctx.fillStyle = 'rgba(198, 144, 223, 0.1)';
+    //ctx.fillStyle = 'rgba(198, 144, 223, 0.25)';
+    ctx.fillStyle = 'black';
     ctx.fill();
 
     offset+=0.0005;

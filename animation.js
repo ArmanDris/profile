@@ -5,7 +5,7 @@
 
 let canvas = document.getElementById("welcome_canvas");
 
-let container = document.getElementsByTagName("header")[0];
+let container = document.getElementById("welcome-container");
 var w = container.clientWidth;
 var h = container.clientHeight;
 

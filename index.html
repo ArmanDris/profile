@@ -12,7 +12,14 @@
 </head>
 
 <body class="bg-black text-[#FBF2EA] manrope">
-    <header class="relative flex h-screen justify-center bg-[#FBF2EA]">
+
+    <header class="fixed top-0 left-0 w-screen h-16 bg- z-10 bg-[#FBF2EA] text-black text-xl">
+        <a>Home</a>
+        <a>GitHub</a>
+        <a>Projects</a>
+    </header>
+
+    <div id="welcome-container" class="relative flex h-screen justify-center bg-[#FBF2EA]">
         <canvas id="welcome_canvas" class="absolute top-0 left-0"></canvas>
         <h1 class="absolute text-5xl tracking-wider font-bold text-center w-[75vw] top-[35%] text-[#1f1f1f]">
             <!-- The next change should be to add a live background. I want to make it look like
@@ -20,7 +27,7 @@
             or smt, i think it will look cool-->
             Welcome, this is where I keep all my projects.
         </h1>
-    </header>
+    </div>
 
     <main class="p-20 leading-8 bg-black">
 

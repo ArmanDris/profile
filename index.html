@@ -7,24 +7,22 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Manrope:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Manrope:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body class="bg-black text-[#FBF2EA] manrope">
 
-    <header class="fixed flex justify-center items-center top-0 left-0 w-screen h-16 bg- z-10 bg-[#FBF2EA] text-black text-base">
-        <div>
-            <a href="index.html" class="m-6">Home</a>
-        </div>
-        <div>
-            <a href="index.html" class="m-6">GitHub</a>
-            <a href="index.html" class="m-6">Projects</a>
-            <a href="index.html" class="m-6">LinkedIn</a>
-        </div>
-    </header>
+    <nav class="fixed flex justify-center items-center top-0 left-0 w-screen h-12 bg- z-10 bg-[#FBF2EA] bg-opacity-60 backdrop-blur-md text-black text-sm">
+        <a href="index.html" class="m-6">Home</a>
+        <a href="index.html" class="m-6">GitHub</a>
+        <a href="index.html" class="m-6">Projects</a>
+        <a href="index.html" class="m-6">LinkedIn</a>
+    </nav>
 
-    <div id="welcome-container" class="relative flex h-screen justify-center bg-[#FBF2EA]">
+    <header id="welcome-container" class="relative flex h-screen justify-center bg-[#FBF2EA]">
         <canvas id="welcome_canvas" class="absolute top-0 left-0"></canvas>
         <h1 class="absolute text-5xl tracking-wider font-bold text-center w-[75vw] top-[35%] text-[#1f1f1f]">
             <!-- The next change should be to add a live background. I want to make it look like
@@ -32,7 +30,7 @@
             or smt, i think it will look cool-->
             Welcome, this is where I keep all my projects.
         </h1>
-    </div>
+    </header>
 
     <main class="p-20 leading-8 bg-black">
 
@@ -86,7 +84,8 @@
             </div>
         </div>
 
-        <h2 class="text-4xl text-center mt-40 my-10">I love the rest of my projects as well, not enough to put them on the homepage though.</h2>
+        <h2 class="text-4xl text-center mt-40 my-10">I love the rest of my projects as well, not enough to put them on
+            the homepage though.</h2>
         <p class="text-center mb-40 text-lg"><a href="projects.html">The rest of my projects</a></p>
 
     </main>

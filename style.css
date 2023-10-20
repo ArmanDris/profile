@@ -26,3 +26,11 @@ a {
 a:hover {
     border-bottom: 2px solid #FBF2EA;
 }
+
+header a {
+    border-bottom: 1px solid #000000;
+}
+
+header a:hover {
+    border-bottom: 2px solid #000000;
+}

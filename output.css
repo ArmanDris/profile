@@ -645,6 +645,10 @@ video {
   height: 100%;
 }
 
+.h-\[20rem\] {
+  height: 20rem;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -659,6 +663,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-\[20rem\] {
+  width: 20rem;
 }
 
 .list-inside {

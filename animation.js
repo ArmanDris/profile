@@ -1,9 +1,7 @@
-// To do: If the last row of dots gets just cut off then it will look like there is more padding on the right and bottom.
-//        To fix this I will need to make sure that the last dot is drawn at the edge of the space like the first one
-//
-//        After that I will need to handle window resize
+//        TODO: Handle window resize
 
 let canvas = document.getElementById("welcome_canvas");
+let ctx = canvas.getContext("2d");
 
 let container = document.getElementById("welcome-container");
 var w = container.clientWidth;
@@ -13,39 +11,68 @@ var h = container.clientHeight;
 canvas.width = w;
 canvas.height = h;
 
-let ctx = canvas.getContext("2d");
+var width = 250;
+var edge = 30;
 
-let offset = 0;
-
-function mainMountainSin(x) {
-    //return Math.sin(x + offset*2) + 0.5 * Math.sin(2 * x + offset*2) + 0.25 * Math.sin(4 * x + offset*2);
-    return -Math.sin(1.75*(x+2*offset)) - Math.sin(3*(x+5*offset)) - Math.sin(6*(x+3*offset)) + Math.sin(8*(x+5*offset));
-}
+var centerX = canvas.width / 1.2;
+var centerY = canvas.height / 1.2;
 
 function drawScene() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    // Draw the circle
     ctx.beginPath();
-    ctx.moveTo(0, canvas.height);
-
-    for (let i = 0; i < canvas.width; i++) {
-        var height = 7;
-        var zoom = 0.005;
-        var y = mainMountainSin(i * zoom) * height + canvas.height / 1.25;
-        ctx.lineTo(i, y);
-    }
-    ctx.lineTo(canvas.width, canvas.height);
+    ctx.arc(centerX, centerY, width - edge*1, 0, Math.PI * 2);
     ctx.closePath();
-
-    ctx.lineWidth = 0;
-
-    //ctx.fillStyle = 'rgba(198, 144, 223, 0.25)';
-    ctx.fillStyle = 'black';
+    // Fill with gradient
+    ctx.fillStyle = "#8B0000";
+    ctx.globalAlpha = 0.2;
     ctx.fill();
 
-    offset+=0.0005;
+    // Draw the circle
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, width - edge*2, 0, Math.PI * 2);
+    ctx.closePath();
+    // Fill with gradient
+    ctx.fillStyle = "#B22222";
+    ctx.globalAlpha = 0.4;
+    ctx.fill();
 
-    requestAnimationFrame(drawScene);
+    // Draw the circle
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, width - edge*3, 0, Math.PI * 2);
+    ctx.closePath();
+    // Fill with gradient
+    ctx.fillStyle = "#DC143C";
+    ctx.globalAlpha = 0.6;
+    ctx.fill();
+
+    // Draw the circle
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, width - edge*4, 0, Math.PI * 2);
+    ctx.closePath();
+    // Fill with gradient
+    ctx.fillStyle = "#E34234";
+    ctx.globalAlpha = 0.8;
+    ctx.fill();
+
+    // Draw the circle
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, width - edge*5, 0, Math.PI * 2);
+    ctx.closePath();
+    // Fill with gradient
+    ctx.fillStyle = "#FF9F00";
+    ctx.globalAlpha = 1;
+    ctx.fill();
+
+    // Draw the circle
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, width - edge*6, 0, Math.PI * 2);
+    ctx.closePath();
+    // Fill with gradient
+    ctx.fillStyle = "#FFD700";
+    ctx.globalAlpha = 1;
+    ctx.fill();
 }
 
 requestAnimationFrame(drawScene);

@@ -1,5 +1,5 @@
 <!-- To start tailwind: 
-    npx tailwindcss -i ./style.css -o ./output.css --watch 
+    npx tailwindcss -i ./style.css -o ./output.css --watch
 -->
 
 <!DOCTYPE html>
@@ -17,25 +17,29 @@
 
 </head>
 
-<body class="bg-black text-[#FBF2EA] manrope">
+<body class="bg-black text-[#EEEEEE] manrope">
 
     <nav
-        class="fixed flex justify-center items-center top-0 left-0 w-screen h-12 bg- z-10 bg-[#FBF2EA] bg-opacity-60 backdrop-blur-md text-black text-sm">
+        class="fixed flex justify-center items-center top-0 left-0 w-screen h-12 bg- z-10 bg-black bg-opacity-60 backdrop-blur-md text-sm">
+        <div class="inline-flex justify-center items-center absolute left-6 font-bold">
+            <img src="img/pfp.jpg" width="32" class="rounded-[50%] m-2" />
+            <p>Arman Drismir</p>
+        </div>
         <a href="index.html" class="m-6">Home</a>
-        <a href="projects.html" class="m-6">Projects</a>
+        <a href="projects.html" class="m-6">Projects List</a>
         <a href="https://github.com/ArmanDris" target="_blank" class="m-6">GitHub</a>
         <a href="https://www.linkedin.com/in/arman-drismir-b378011b9/" target="_blank" class="m-6">LinkedIn</a>
     </nav>
 
-    <header id="welcome-container" class="relative flex h-screen justify-center bg-[#FBF2EA]">
+    <header id="welcome-container" class="relative flex h-screen w-screen justify-center">
         <canvas id="welcome_canvas" class="absolute top-0 left-0"></canvas>
-        <h1 class="absolute text-5xl tracking-wider font-bold text-center w-[75vw] top-[35vh] text-[#1f1f1f]">
+        <h1 class="absolute text-5xl tracking-wider font-bold text-center w-[75vw] top-[35vh]">
             Welcome, this is where I keep all my projects.
         </h1>
     </header>
 
-    <main class="p-20 leading-8 bg-black">
-
+    <main class="p-20 leading-8 bg-black bg-opacity-60 backdrop-blur-md">
+        <script src="https://kit.fontawesome.com/91e3179336.js" crossorigin="anonymous"></script>
         <h2 class="text-4xl text-center my-16">Here are my three favorites.</h2>
 
         <div class="grid items-center grid-cols-4 gap-5 my-36">
@@ -47,7 +51,7 @@
                     <li>Improved search algorithm's speed 600x with profiling & refactoring</li>
                     <li>Used bit manipulation to save 90 bytes on each board object</li>
                 </ul>
-                <a href="https://github.com/ArmanDris/ChessEngines" target="_blank">GitHub Repo</a>
+                <a href="https://github.com/ArmanDris/ChessEngines" target="_blank"><i class="fa-brands fa-github"></i> GitHub Repo</a>
             </div>
             <div class="col-span-1 justify-self-end">
                 <img src="img/chess_game_vid.gif" alt="Chess engine" class="">
@@ -62,8 +66,8 @@
                     <li>Wrote the backend using express and SQLite</li>
                     <li>Client-server connection allows the global high scores to be displayed</li>
                 </ul>
-                <a href="https://github.com/ArmanDris/Sudoku" target="_blank" class="mr-2">GitHub Repo</a>
-                <a href="Sudoku/index.html" target="_blank">Live website</a>
+                <a href="https://github.com/ArmanDris/Sudoku" target="_blank" class="mr-2"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                <a href="Sudoku/index.html" target="_blank"><i class="fa-solid fa-display"></i> Website</a>
             </div>
             <div class="col-span-1 justify-self-end">
                 <img src="img/Sudoku_gif.gif" class="w-full"></img>
@@ -78,11 +82,11 @@
                     web design. I also wanted a place to host all of my past projects and I
                     did not want to make a repo for every single one.
                 </p>
-                <a href="https://github.com/ArmanDris/profile" target="_blank" class="mr-2">GitHub Repo</a>
-                <a href="index.html" target="_blank">This is a link to the page you are on</a>
+                <a href="https://github.com/ArmanDris/profile" target="_blank" class="mr-2"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                <a href="index.html" target="_blank"><i class="fa-solid fa-display"></i> Website</a>
             </div>
             <div class="col-span-1 justify-self-end">
-                <img src="img/profile_preview.gif" class="w-full"></img>
+                <img src="img/profile_preview.png" class="w-full"></img>
             </div>
         </div>
 
@@ -93,6 +97,7 @@
     </main>
 
     <footer class="h-[50vh] flex items-center justify-center flex-col">
+        <p>Arman Drismir</p>
         <p>adrismir@gmail.com</p>
     </footer>
 </body>

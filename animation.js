@@ -11,11 +11,15 @@ var h = container.clientHeight;
 canvas.width = w;
 canvas.height = h;
 
+window.onscroll = function() { centerY = (window.scrollY/3) + canvas.height / 1.5; drawScene(); };
+
 var width = 250;
 var edge = 30;
 
 var centerX = canvas.width / 1.2;
-var centerY = canvas.height / 1.2;
+var centerY = canvas.height / 1.5;
+
+//window.onresize(drawScene);
 
 function drawScene() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -75,4 +79,4 @@ function drawScene() {
     ctx.fill();
 }
 
-requestAnimationFrame(drawScene);
+drawScene();
